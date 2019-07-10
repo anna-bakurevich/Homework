@@ -1,6 +1,6 @@
 package lesson8;
 
-public class DemoFigure {
+public class DemoShape {
     public static void main(String[] args) {
         Shape triangle = new Triangle(2, 3, 4);
         System.out.printf("Площадь треугольника со сторонами: %.2f; %.2f; %.2f равна: %.2f\n",
