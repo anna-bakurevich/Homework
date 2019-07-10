@@ -32,7 +32,6 @@ public class DemoShape {
         System.out.printf("Длина эллипса с осями: %.2f; %.2f равна: %.2f\n", ellipse.getA(), ellipse.getB(), ellipse.perimeter());
 
         triangle.isEqualsArea(triangle);
-        rectangle.isEqualsArea(rectangle1);
         circle.isEqualsArea(circle1);
         square.isEqualsArea(rectangle);
 
