@@ -13,7 +13,7 @@ public class Lesson5Task1_2 {
         String[] arrayString = new String[10];
         System.out.println("Пустой массив String[10] занимает \t" + getObjectSize(arrayString) + " байт");
 
-        //заполняем массивы
+        //заполняем все массивы
         for (Byte i = 0; i < arrayLong.length; i++) {
             arrayLong[i] = Long.valueOf(i*123456789l);
             arrayDouble[i] = Double.valueOf(i*12345.66);

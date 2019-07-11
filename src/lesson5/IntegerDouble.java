@@ -8,7 +8,6 @@ public class IntegerDouble {
     private double d1;
     private double d2;
 
-
     public IntegerDouble(int i1, int i2) {
         this.i1 = i1;
         this.i2 = i2;
