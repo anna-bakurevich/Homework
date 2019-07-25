@@ -9,6 +9,7 @@ import java.util.List;
 
 public class Lesson17Task2 {
     public static void main(String[] args) {
+
         List<String> list = Arrays.asList("Андрей", "Алексей", "Анна", "Александра", "Георгий", "Александр", "Алексей",
                 "Алена", "Валерия");
         System.out.println("Исходный список строк: " + list);

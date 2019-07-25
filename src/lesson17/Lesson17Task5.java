@@ -29,6 +29,7 @@ public class Lesson17Task5 {
                 .map(person -> person.getFirstName() + " " + person.getLastName())
                 //получаем значение первого элемента
                 .findFirst().get();
+
         System.out.println("Самый старший человек с длиной полного имени менее 15 символов: " + fullNameAge);
     }
 }

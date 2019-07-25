@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 public class Lesson17Task4 {
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(5, 2, 4, 2, 1);
+
         String result = numbers.stream()
                 .map(n -> n.toString())//преобразуем каждый элемент в String
                 .collect(Collectors.joining());//объединяем все элементы в одну строку
