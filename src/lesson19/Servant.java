@@ -62,7 +62,7 @@ public class Servant implements Runnable {
                 e.printStackTrace();
             }
         }
-        System.out.println(Thread.currentThread().getName() + "" + ": мой ученый изготовил " + countRobots + " роботов");
+        Lesson19Task1.robots.put(Thread.currentThread().getName(), countRobots);
     }
 
     //сумма деталей map

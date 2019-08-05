@@ -13,9 +13,13 @@ package lesson19;
 После 100 ночей (около 10 секунд) определить победителя соревнования.
  */
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.Semaphore;
 
 public class Lesson19Task1 {
+    public static Map<String, Integer> robots = new HashMap<>();
+
     public static void main(String[] args) throws InterruptedException {
         Dump dump = new Dump();
         Semaphore semaphore = new Semaphore(3);
@@ -23,10 +27,27 @@ public class Lesson19Task1 {
         Thread factory = new Thread(new Factory(dump), "Фабрика");
         Thread servant1 = new Thread(new Servant(dump), "Слуга 1");
         Thread servant2 = new Thread(new Servant(dump), "Слуга 2");
+
         factory.start();
         Thread.sleep(100);
         servant1.start();
         servant2.start();
+        factory.join();
+        servant1.join();
+        servant2.join();
 
+        int countRobotsScientist1 = robots.get("Слуга 1");
+        int countRobotsScientist2 = robots.get("Слуга 2");
+
+        System.out.println("Первый ученый изготовил " + countRobotsScientist1 + " роботов");
+        System.out.println("Второй ученый изготовил " + countRobotsScientist2 + " роботов");
+        System.out.println("========================================");
+        if (countRobotsScientist1 > countRobotsScientist2) {
+            System.out.println("\u001B[31m" + "Победа присуждается первому ученому!" +  "\u001B[0m");
+        } else if (countRobotsScientist1 < countRobotsScientist2) {
+            System.out.println("Победа присуждается второму ученому! ");
+        } else {
+            System.out.println("Ничья!");
+        }
     }
 }
